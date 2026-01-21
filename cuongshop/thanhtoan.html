@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thanh toán | CUONG SHOP</title>
+    <link rel="stylesheet" href="css/thanhtoan.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="header-container">
+        <a href="index.html" class="logo">
+          <img src="img/logo.jpg" alt="Cuong Shop" />
+        </a>
+
+        <div class="icon-menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="sanpham.html">Sản phẩm</a>
+          <a href="lienhe.html">Liên hệ</a>
+          <a href="story.html">Câu chuyện</a>
+          <a href="giohang.html" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+        <div class="promo-input">
+          <input type="text" id="promoCode" placeholder="Nhập mã khuyến mãi" />
+          <button onclick="applyPromo()">Áp dụng</button>
+        </div>
+
+        <p>Giảm giá: <span id="discount">0đ</span></p>
+        <p>
+          <b>Tổng thanh toán: <span id="finalTotal">0đ</span></b>
+        </p>
+      </nav>
+    </header>
+
+    <!-- NỘI DUNG -->
+    <main class="container">
+      <h2 class="title">THANH TOÁN ĐƠN HÀNG</h2>
+
+      <div class="payment-box">
+        <div class="payment-method">
+          <h3>💵 Thanh toán tiền mặt</h3>
+          <p>Thanh toán khi nhận hàng (COD).</p>
+        </div>
+
+        <div class="payment-method">
+          <h3>📱 Ví điện tử</h3>
+          <p>MoMo – ZaloPay</p>
+        </div>
+
+        <div class="payment-method">
+          <h3>🏦 Ngân hàng</h3>
+          <p>MB Bank – VIB – Vietcombank – Techcombank</p>
+        </div>
+
+        <button class="btn-confirm">Xác nhận thanh toán</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 CUONG SHOP</p>
+    </footer>
+  </body>
+</html>
