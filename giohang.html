@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Giỏ hàng | CUONG SHOP</title>
+    <link rel="stylesheet" href="css/giohang.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <nav class="header-container">
+        <a href="index.html" class="logo">
+          <img src="img/logo.jpg" alt="Cuong Shop" />
+        </a>
+
+        <div class="icon-menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="sanpham.html">Sản phẩm</a>
+          <a href="lienhe.html">Liên hệ</a>
+          <a href="story.html">Câu chuyện</a>
+          <div class="search-box">
+            <input type="text" placeholder="Tìm sản phẩm..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <a href="dangnhap.html"><i class="fa-solid fa-user"></i></a>
+
+          <a href="giohang.html" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== NỘI DUNG ===== -->
+    <main class="container">
+      <h2 class="title">GIỎ HÀNG CỦA BẠN</h2>
+
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Hình ảnh</th>
+            <th>Sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+            <th>Xóa</th>
+          </tr>
+        </thead>
+        <tbody id="cartBody"></tbody>
+      </table>
+
+      <div class="cart-total">
+        <h3>Tổng tiền: <span id="cartTotal">0đ</span></h3>
+        <a href="thanhtoan.html" class="btn-checkout">Thanh toán</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 CUONG SHOP</p>
+    </footer>
+
+    <script src="js/xulygiohang.js"></script>
+  </body>
+</html>

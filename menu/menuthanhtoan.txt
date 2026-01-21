@@ -1,0 +1,3 @@
+thanhtoan.html 
+css/thanhtoan.css 
+js/thanhtoan.js

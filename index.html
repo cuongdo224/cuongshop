@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CUONG SHOP</title>
+    <link rel="stylesheet" href="css/giaodien.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="header-inner">
+        <!-- LOGO (BÊN TRÁI) -->
+        <a href="index.html" class="logo logo-x">
+          <img src="img/logo.jpg" alt="CUONG SHOP" />
+        </a>
+
+        <!-- MENU + ICON (BÊN PHẢI) -->
+        <div class="icon-menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="sanpham.html">Sản phẩm</a>
+          <a href="lienhe.html">Liên hệ</a>
+          <a href="story.html">Câu chuyện</a>
+          <div class="search-box">
+            <input type="text" placeholder="Tìm sản phẩm..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <a href="danhmuc.html" title="Danh mục">
+            <i class="fa-solid fa-list"></i>
+          </a>
+
+          <a href="dangnhap.html" title="Đăng nhập">
+            <i class="fa-solid fa-user"></i>
+          </a>
+
+          <a href="giohang.html" title="Giỏ hàng" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <section class="promo-section fade-item">
+      <div class="promo-container">
+        <h2>🎉 KHUYẾN MÃI ĐẶC BIỆT</h2>
+
+        <div class="promo-list">
+          <div class="promo-card">
+            <h3>SALE 10%</h3>
+            <p>Áp dụng cho đơn hàng từ 300.000đ</p>
+            <span class="promo-code">CUONG10</span>
+          </div>
+
+          <div class="promo-card hot">
+            <h3>SALE 20%</h3>
+            <p>Áp dụng cho đơn hàng từ 600.000đ</p>
+            <span class="promo-code">CUONG20</span>
+          </div>
+
+          <div class="promo-card">
+            <h3>FREESHIP</h3>
+            <p>Miễn phí vận chuyển toàn quốc</p>
+            <span class="promo-code">SHIP0D</span>
+          </div>
+        </div>
+
+        <p class="promo-time">
+          ⏰ Kết thúc sau: <span id="promoCountdown"></span>
+        </p>
+      </div>
+    </section>
+    <section class="promo-slider-section fade-item">
+      <div class="promo-slider-container">
+        <button class="promo-btn prev" onclick="prevPromo()">&#10094;</button>
+
+        <div class="promo-slider">
+          <img
+            id="promoImage"
+            src="img/promo/promo1.jpg"
+            alt="Khuyến mãi CUONG SHOP"
+          />
+        </div>
+
+        <button class="promo-btn next" onclick="nextPromo()">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- ===== MAIN ===== -->
+    <main class="shop-layout">
+      <!-- DANH MỤC -->
+      <aside class="category-box">
+        <h3>Danh mục</h3>
+        <ul>
+          <li>Áo</li>
+          <li>Quần</li>
+          <li>Váy</li>
+        </ul>
+      </aside>
+
+      <!-- SẢN PHẨM -->
+      <section class="product-box">
+        <h2>Sản phẩm</h2>
+
+        <div class="products">
+          <div class="product">
+            <img src="img/aothun.jpg" />
+            <h3>Áo thun nam</h3>
+            <p>90.000đ</p>
+            <button onclick="addToCart('Áo thun nam', 90000, 'img/aothun.jpg')">
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product">
+            <img src="img/aothunnu.jpg" />
+            <h3>Áo thun nữ</h3>
+            <p>100.000đ</p>
+            <button
+              onclick="addToCart('Áo thun nữ', 100000, 'img/aothunnu.jpg')"
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product">
+            <img src="img/quanjean.jpg" />
+            <h3>Quần jean nam</h3>
+            <p>150.000đ</p>
+            <button
+              onclick="addToCart('Quần jean nam', 150000, 'img/quanjean.jpg')"
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product">
+            <img src="img/aoni.jpg" />
+            <h3>Áo nỉ</h3>
+            <p>200.000đ</p>
+            <button onclick="addToCart('Áo nỉ', 200000, 'img/aoni.jpg')">
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product">
+            <img src="img/aonu.jpg" />
+            <h3>Áo sơ mi nữ</h3>
+            <p>180.000đ</p>
+            <button onclick="addToCart('Áo sơ mi nữ', 180000, 'img/aonu.jpg')">
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product">
+            <img src="img/aosomi.jpg" />
+            <h3>Áo sơ mi trắng</h3>
+            <p>160.000đ</p>
+            <button
+              onclick="addToCart('Áo sơ mi trắng', 160000, 'img/aosomi.jpg')"
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+
+          <div class="product">
+            <img src="img/vaythoitrang.jpg" />
+            <h3>Váy thời trang</h3>
+            <p>220.000đ</p>
+            <button
+              onclick="
+                addToCart('Váy thời trang', 220000, 'img/vaythoitrang.jpg')
+              "
+            >
+              Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <footer>
+  <a href="https://cuongshop.github.io" target="_blank">www.cuongshop.vn</a>
+      <p>© 2026 CUONG SHOP | Hotline: 0345826601</p>
+    </footer>
+
+    <script src="js/xulytrangchu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Danh mục sản phẩm</title>
+    <link rel="stylesheet" href="css/danhmuc.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="header-inner">
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+          <img src="img/logo.jpg" alt="CUONG SHOP" />
+        </a>
+
+        <!-- MENU -->
+        <div class="icon-menu">
+          <a href="index.html">Trang chủ</a>
+          <a href="sanpham.html">Sản phẩm</a>
+          <a href="lienhe.html">Liên hệ</a>
+          <a href="story.html">Câu chuyện</a>
+          <div class="search-box">
+            <input type="text" placeholder="Tìm sản phẩm..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <a href="danhmuc.html" title="Danh mục">
+            <i class="fa-solid fa-list"></i>
+          </a>
+
+          <a href="dangnhap.html" title="Đăng nhập">
+            <i class="fa-solid fa-user"></i>
+          </a>
+
+          <a href="giohang.html" title="Giỏ hàng" class="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="filter-box">
+      <select id="categoryFilter" onchange="filterProducts()">
+        <option value="all">Tất cả</option>
+        <option value="Áo">Áo</option>
+        <option value="Quần">Quần</option>
+        <option value="Váy">Váy</option>
+      </select>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Tìm kiếm sản phẩm..."
+        onkeyup="filterProducts()"
+      />
+    </div>
+
+    <section class="products" id="productList">
+      <!-- JS render sản phẩm tại đây -->
+    </section>
+
+    <footer>
+      <p>Cuong Shop</p>
+    </footer>
+
+    <script src="js/danhmuc.js"></script>
+    <script src="js/danhsachsanpham.js"></script>
+  </body>
+</html>
